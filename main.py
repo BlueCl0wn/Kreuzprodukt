@@ -1,5 +1,13 @@
 import math
 
+""" a)
+A = (1, -2, 4)
+B = (7, 0, 6)
+C = (5, 6, -4)
+D = (-1, 4, -6)
+"""
+
+
 """ b)
 A = (3,2,-2)
 B = (1,5,1)
@@ -76,10 +84,39 @@ def spat(A, B, C, D):
 
 # d)  Berechnet den Flächeninhalt einer dreiseitigen Pyramide.
 def dreiPyramide(A, B, C, D):
-  return spat(A, B, C, D)/6
+  return (spat(A, B, C, D)/6)
 
-# Ausgabefunktion für dreiPyramide.
-def printDP(A, B, C, D):
+# Ausgabefunktion für Parallelogramm.
+def printParallel(A, B, C):
+  print("Vektoren: ")
+  print("Ergebnis: " + str(parallel(A, B, C)))
+  print()
+
+# Ausgabefunktion fürs Dreieck.
+def printDreieck(A, B, C):
+  print("Vektoren: ")
+  print("Ergebnis: " + str(dreieck(A, B, C)))
+  print()
+
+# Ausgabefunktion fürs Spat.
+def printSpat(A, B, C, D):
+  print("Vektoren: ")
+  print("Ergebnis: " + str(spat(A, B, C, D)))
+  print()
+
+# Ausgabefunktion für eine dreiseitige Pyramide.
+def printDreiPyramide(A, B, C, D):
+  print("Vektoren: ")
   print("Ergebnis: " + str(dreiPyramide(A, B, C, D)))
+  print()
 
-printDP(A, B, C, E)
+def printAll():
+  printParallel(A, B, C),
+
+  printDreieck(A, B, C)
+
+  printSpat(A, B, C, E)
+
+  printDreiPyramide(A, B, C, E)
+
+printAll()
